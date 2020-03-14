@@ -10,11 +10,13 @@ The entire processor with modules can be seen in the compile/SingleCycleProc.v t
 Example: Our SingleCycleProccessor is running a "load word Instruction" so here is our assembly instructions sent to the processor
 
 Assembly File instruction (compile/loadword/loadword.s)
+
     lw 1 0 three
 done halt
 three .fill 3
 
 Hexadecimal Machine Language Translation (compile/loadword/prg.bin)
+
 8C010002
 FC000000
 00000003
