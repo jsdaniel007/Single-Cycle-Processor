@@ -2,6 +2,7 @@
 Single-Cycle Processor Implemented with iVerilog in CSCI 330: Computer Architecture with Dr. Paul West
 
 Processor based on MIPS-32 Design below:
+
 ![MIPS 32 Datapath](pics/07-datapathdiagram.pdf)
 
 The entire processor with modules can be seen in the compile/SingleCycleProc.v testfile
@@ -22,8 +23,10 @@ FC000000
 
 And here is the result of our running our instruction through our processor:
 Use this to follow the values along:
+
 ![Load Word Guide](pics/loadwordguide.pdf)
 
 Note: This is a lot of output
+
 [Single Cycle Processor Ouput](pics/loadwordout.txt)
 
