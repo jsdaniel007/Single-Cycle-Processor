@@ -35,22 +35,27 @@ begin
 			//assign writeto = {{28{writeto[4]}}, writeto};
 			//#471 //#530 - 29
 			RF[writeto] <= writedat;
-			$display("RF[writeto] <= writedat is here!!!");
+			$display("RF[writeto] <= writedat");
+			$display("we have written in our %b to register file location %b", writedat, RF[writeto]);
+			for (i = 0; i < 5; i = i + 1) begin
+			$display("register%d: %b", i, RF[i]);
+			end
 		end
 
 		//#400 //Don't change unless it bleeds into another cycle
 		//$display("Register[writeto] %b", RF[writeto]);
 		//$display("Register File out1: %b", out1);
 		//$display("Register File out2: %b", out2);
-		for (i = 0; i < 32; i = i + 1) begin
-		$display("register%d: %b", i, RF[i]);
-		end
 
 		out1 <= RF[Y0];
 		out2 <= RF[Y1];
 		$display("out1: %b", out1);
 		$display("out2: %b", out2);
+		for (i = 0; i < 5; i = i + 1) begin
+		$display("register%d: %b", i, RF[i]);
+		end
 	end
 		//Under the always block
+
 
 endmodule //regfile32
