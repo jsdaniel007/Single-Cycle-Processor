@@ -14,8 +14,8 @@ module singleCycleProctest ();
 
 	singleCycleProc DUT(clk, rst);
 	initial begin
-	$dumpfile("gtk/singleCycle-gtkwave.vcd");
-    $dumpvars(0, DUT);
+	//$dumpfile("gtk/singleCycle-gtkwave.vcd");
+	//$dumpvars(0, DUT);
 	// Dr. PK: start reset here
 	rst <= 1;
 	$display("reset is occurring:");
