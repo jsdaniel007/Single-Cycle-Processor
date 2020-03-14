@@ -3,7 +3,7 @@ Single-Cycle Processor Implemented with iVerilog in CSCI 330: Computer Architect
 
 Processor based on MIPS-32 Design below:
 
-![MIPS 32 Datapath](pics/07-datapathdiagram.pdf)
+![MIPS 32 Datapath](pics/07-datapathpic.png-1.png)
 
 The entire processor with modules can be seen in the compile/SingleCycleProc.v testfile
 
@@ -26,7 +26,7 @@ Hexadecimal Machine Language Translation (compile/loadword/prg.bin)
 And here is the result of our running our instruction through our processor:
 Use this to follow the values along:
 
-![Load Word Guide](pics/loadwordguide.pdf)
+![Load Word Guide](pics/LoadwordGuidePic-1.png)
 
 Note: This is a lot of output
 
