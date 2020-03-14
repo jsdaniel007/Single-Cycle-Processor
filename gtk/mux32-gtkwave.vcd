@@ -1,0 +1,776 @@
+$date
+	Sat Feb 23 22:20:10 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux32test $end
+$scope module DUT $end
+$var wire 32 ! inA [31:0] $end
+$var wire 32 " inB [31:0] $end
+$var wire 1 # inS $end
+$var wire 32 $ outO [31:0] $end
+$scope module mux0 $end
+$var wire 1 % Snot $end
+$var wire 1 & T1 $end
+$var wire 1 ' T2 $end
+$var wire 1 ( inA $end
+$var wire 1 ) inB $end
+$var wire 1 # inS $end
+$var wire 1 * outO $end
+$upscope $end
+$scope module mux1 $end
+$var wire 1 + Snot $end
+$var wire 1 , T1 $end
+$var wire 1 - T2 $end
+$var wire 1 . inA $end
+$var wire 1 / inB $end
+$var wire 1 # inS $end
+$var wire 1 0 outO $end
+$upscope $end
+$scope module mux10 $end
+$var wire 1 1 Snot $end
+$var wire 1 2 T1 $end
+$var wire 1 3 T2 $end
+$var wire 1 4 inA $end
+$var wire 1 5 inB $end
+$var wire 1 # inS $end
+$var wire 1 6 outO $end
+$upscope $end
+$scope module mux11 $end
+$var wire 1 7 Snot $end
+$var wire 1 8 T1 $end
+$var wire 1 9 T2 $end
+$var wire 1 : inA $end
+$var wire 1 ; inB $end
+$var wire 1 # inS $end
+$var wire 1 < outO $end
+$upscope $end
+$scope module mux12 $end
+$var wire 1 = Snot $end
+$var wire 1 > T1 $end
+$var wire 1 ? T2 $end
+$var wire 1 @ inA $end
+$var wire 1 A inB $end
+$var wire 1 # inS $end
+$var wire 1 B outO $end
+$upscope $end
+$scope module mux13 $end
+$var wire 1 C Snot $end
+$var wire 1 D T1 $end
+$var wire 1 E T2 $end
+$var wire 1 F inA $end
+$var wire 1 G inB $end
+$var wire 1 # inS $end
+$var wire 1 H outO $end
+$upscope $end
+$scope module mux14 $end
+$var wire 1 I Snot $end
+$var wire 1 J T1 $end
+$var wire 1 K T2 $end
+$var wire 1 L inA $end
+$var wire 1 M inB $end
+$var wire 1 # inS $end
+$var wire 1 N outO $end
+$upscope $end
+$scope module mux15 $end
+$var wire 1 O Snot $end
+$var wire 1 P T1 $end
+$var wire 1 Q T2 $end
+$var wire 1 R inA $end
+$var wire 1 S inB $end
+$var wire 1 # inS $end
+$var wire 1 T outO $end
+$upscope $end
+$scope module mux16 $end
+$var wire 1 U Snot $end
+$var wire 1 V T1 $end
+$var wire 1 W T2 $end
+$var wire 1 X inA $end
+$var wire 1 Y inB $end
+$var wire 1 # inS $end
+$var wire 1 Z outO $end
+$upscope $end
+$scope module mux17 $end
+$var wire 1 [ Snot $end
+$var wire 1 \ T1 $end
+$var wire 1 ] T2 $end
+$var wire 1 ^ inA $end
+$var wire 1 _ inB $end
+$var wire 1 # inS $end
+$var wire 1 ` outO $end
+$upscope $end
+$scope module mux18 $end
+$var wire 1 a Snot $end
+$var wire 1 b T1 $end
+$var wire 1 c T2 $end
+$var wire 1 d inA $end
+$var wire 1 e inB $end
+$var wire 1 # inS $end
+$var wire 1 f outO $end
+$upscope $end
+$scope module mux19 $end
+$var wire 1 g Snot $end
+$var wire 1 h T1 $end
+$var wire 1 i T2 $end
+$var wire 1 j inA $end
+$var wire 1 k inB $end
+$var wire 1 # inS $end
+$var wire 1 l outO $end
+$upscope $end
+$scope module mux2 $end
+$var wire 1 m Snot $end
+$var wire 1 n T1 $end
+$var wire 1 o T2 $end
+$var wire 1 p inA $end
+$var wire 1 q inB $end
+$var wire 1 # inS $end
+$var wire 1 r outO $end
+$upscope $end
+$scope module mux20 $end
+$var wire 1 s Snot $end
+$var wire 1 t T1 $end
+$var wire 1 u T2 $end
+$var wire 1 v inA $end
+$var wire 1 w inB $end
+$var wire 1 # inS $end
+$var wire 1 x outO $end
+$upscope $end
+$scope module mux21 $end
+$var wire 1 y Snot $end
+$var wire 1 z T1 $end
+$var wire 1 { T2 $end
+$var wire 1 | inA $end
+$var wire 1 } inB $end
+$var wire 1 # inS $end
+$var wire 1 ~ outO $end
+$upscope $end
+$scope module mux22 $end
+$var wire 1 !" Snot $end
+$var wire 1 "" T1 $end
+$var wire 1 #" T2 $end
+$var wire 1 $" inA $end
+$var wire 1 %" inB $end
+$var wire 1 # inS $end
+$var wire 1 &" outO $end
+$upscope $end
+$scope module mux23 $end
+$var wire 1 '" Snot $end
+$var wire 1 (" T1 $end
+$var wire 1 )" T2 $end
+$var wire 1 *" inA $end
+$var wire 1 +" inB $end
+$var wire 1 # inS $end
+$var wire 1 ," outO $end
+$upscope $end
+$scope module mux24 $end
+$var wire 1 -" Snot $end
+$var wire 1 ." T1 $end
+$var wire 1 /" T2 $end
+$var wire 1 0" inA $end
+$var wire 1 1" inB $end
+$var wire 1 # inS $end
+$var wire 1 2" outO $end
+$upscope $end
+$scope module mux25 $end
+$var wire 1 3" Snot $end
+$var wire 1 4" T1 $end
+$var wire 1 5" T2 $end
+$var wire 1 6" inA $end
+$var wire 1 7" inB $end
+$var wire 1 # inS $end
+$var wire 1 8" outO $end
+$upscope $end
+$scope module mux26 $end
+$var wire 1 9" Snot $end
+$var wire 1 :" T1 $end
+$var wire 1 ;" T2 $end
+$var wire 1 <" inA $end
+$var wire 1 =" inB $end
+$var wire 1 # inS $end
+$var wire 1 >" outO $end
+$upscope $end
+$scope module mux27 $end
+$var wire 1 ?" Snot $end
+$var wire 1 @" T1 $end
+$var wire 1 A" T2 $end
+$var wire 1 B" inA $end
+$var wire 1 C" inB $end
+$var wire 1 # inS $end
+$var wire 1 D" outO $end
+$upscope $end
+$scope module mux28 $end
+$var wire 1 E" Snot $end
+$var wire 1 F" T1 $end
+$var wire 1 G" T2 $end
+$var wire 1 H" inA $end
+$var wire 1 I" inB $end
+$var wire 1 # inS $end
+$var wire 1 J" outO $end
+$upscope $end
+$scope module mux29 $end
+$var wire 1 K" Snot $end
+$var wire 1 L" T1 $end
+$var wire 1 M" T2 $end
+$var wire 1 N" inA $end
+$var wire 1 O" inB $end
+$var wire 1 # inS $end
+$var wire 1 P" outO $end
+$upscope $end
+$scope module mux3 $end
+$var wire 1 Q" Snot $end
+$var wire 1 R" T1 $end
+$var wire 1 S" T2 $end
+$var wire 1 T" inA $end
+$var wire 1 U" inB $end
+$var wire 1 # inS $end
+$var wire 1 V" outO $end
+$upscope $end
+$scope module mux30 $end
+$var wire 1 W" Snot $end
+$var wire 1 X" T1 $end
+$var wire 1 Y" T2 $end
+$var wire 1 Z" inA $end
+$var wire 1 [" inB $end
+$var wire 1 # inS $end
+$var wire 1 \" outO $end
+$upscope $end
+$scope module mux31 $end
+$var wire 1 ]" Snot $end
+$var wire 1 ^" T1 $end
+$var wire 1 _" T2 $end
+$var wire 1 `" inA $end
+$var wire 1 a" inB $end
+$var wire 1 # inS $end
+$var wire 1 b" outO $end
+$upscope $end
+$scope module mux4 $end
+$var wire 1 c" Snot $end
+$var wire 1 d" T1 $end
+$var wire 1 e" T2 $end
+$var wire 1 f" inA $end
+$var wire 1 g" inB $end
+$var wire 1 # inS $end
+$var wire 1 h" outO $end
+$upscope $end
+$scope module mux5 $end
+$var wire 1 i" Snot $end
+$var wire 1 j" T1 $end
+$var wire 1 k" T2 $end
+$var wire 1 l" inA $end
+$var wire 1 m" inB $end
+$var wire 1 # inS $end
+$var wire 1 n" outO $end
+$upscope $end
+$scope module mux6 $end
+$var wire 1 o" Snot $end
+$var wire 1 p" T1 $end
+$var wire 1 q" T2 $end
+$var wire 1 r" inA $end
+$var wire 1 s" inB $end
+$var wire 1 # inS $end
+$var wire 1 t" outO $end
+$upscope $end
+$scope module mux7 $end
+$var wire 1 u" Snot $end
+$var wire 1 v" T1 $end
+$var wire 1 w" T2 $end
+$var wire 1 x" inA $end
+$var wire 1 y" inB $end
+$var wire 1 # inS $end
+$var wire 1 z" outO $end
+$upscope $end
+$scope module mux8 $end
+$var wire 1 {" Snot $end
+$var wire 1 |" T1 $end
+$var wire 1 }" T2 $end
+$var wire 1 ~" inA $end
+$var wire 1 !# inB $end
+$var wire 1 # inS $end
+$var wire 1 "# outO $end
+$upscope $end
+$scope module mux9 $end
+$var wire 1 ## Snot $end
+$var wire 1 $# T1 $end
+$var wire 1 %# T2 $end
+$var wire 1 &# inA $end
+$var wire 1 '# inB $end
+$var wire 1 # inS $end
+$var wire 1 (# outO $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x(#
+0'#
+0&#
+x%#
+x$#
+x##
+x"#
+0!#
+0~"
+x}"
+x|"
+x{"
+xz"
+0y"
+0x"
+xw"
+xv"
+xu"
+xt"
+0s"
+0r"
+xq"
+xp"
+xo"
+xn"
+0m"
+0l"
+xk"
+xj"
+xi"
+xh"
+0g"
+0f"
+xe"
+xd"
+xc"
+xb"
+1a"
+0`"
+x_"
+x^"
+x]"
+x\"
+0["
+0Z"
+xY"
+xX"
+xW"
+xV"
+0U"
+0T"
+xS"
+xR"
+xQ"
+xP"
+0O"
+0N"
+xM"
+xL"
+xK"
+xJ"
+0I"
+0H"
+xG"
+xF"
+xE"
+xD"
+0C"
+0B"
+xA"
+x@"
+x?"
+x>"
+0="
+0<"
+x;"
+x:"
+x9"
+x8"
+07"
+06"
+x5"
+x4"
+x3"
+x2"
+01"
+00"
+x/"
+x."
+x-"
+x,"
+0+"
+0*"
+x)"
+x("
+x'"
+x&"
+0%"
+0$"
+x#"
+x""
+x!"
+x~
+0}
+0|
+x{
+xz
+xy
+xx
+0w
+0v
+xu
+xt
+xs
+xr
+0q
+0p
+xo
+xn
+xm
+xl
+0k
+0j
+xi
+xh
+xg
+xf
+0e
+0d
+xc
+xb
+xa
+x`
+0_
+0^
+x]
+x\
+x[
+xZ
+0Y
+0X
+xW
+xV
+xU
+xT
+0S
+0R
+xQ
+xP
+xO
+xN
+0M
+0L
+xK
+xJ
+xI
+xH
+0G
+0F
+xE
+xD
+xC
+xB
+0A
+0@
+x?
+x>
+x=
+x<
+0;
+0:
+x9
+x8
+x7
+x6
+05
+04
+x3
+x2
+x1
+x0
+0/
+0.
+x-
+x,
+x+
+x*
+0)
+1(
+x'
+x&
+x%
+bx $
+0#
+b10000000000000000000000000000000 "
+b1 !
+$end
+#1
+1%
+1+
+11
+17
+1=
+1C
+1I
+1O
+1U
+1[
+1a
+1g
+1m
+1s
+1y
+1!"
+1'"
+1-"
+13"
+19"
+1?"
+1E"
+1K"
+1Q"
+1W"
+1]"
+1c"
+1i"
+1o"
+1u"
+1{"
+1##
+#4
+0,
+0n
+0R"
+0d"
+0j"
+0p"
+0v"
+0|"
+0$#
+02
+08
+0>
+0D
+0J
+0P
+0V
+0\
+0b
+0h
+0t
+0z
+0""
+0("
+0."
+04"
+0:"
+0@"
+0F"
+0L"
+0X"
+0^"
+0'
+0-
+03
+09
+0?
+0E
+0K
+0Q
+0W
+0]
+0c
+0i
+0o
+0u
+0{
+0#"
+0)"
+0/"
+05"
+0;"
+0A"
+0G"
+0M"
+0S"
+0Y"
+0_"
+0e"
+0k"
+0q"
+0w"
+0}"
+0%#
+#5
+1&
+#8
+00
+06
+0<
+0B
+0H
+0N
+0T
+0Z
+0`
+0f
+0l
+0r
+0x
+0~
+0&"
+0,"
+02"
+08"
+0>"
+0D"
+0J"
+0P"
+0V"
+0\"
+0b"
+0h"
+0n"
+0t"
+0z"
+0"#
+b0x $
+0(#
+#9
+b1 $
+1*
+#10
+1#
+#11
+0%
+0+
+01
+07
+0=
+0C
+0I
+0O
+0U
+0[
+0a
+0g
+0m
+0s
+0y
+0!"
+0'"
+0-"
+03"
+09"
+0?"
+0E"
+0K"
+0Q"
+0W"
+0]"
+0c"
+0i"
+0o"
+0u"
+0{"
+0##
+#14
+1_"
+#15
+0&
+#18
+b10000000000000000000000000000001 $
+1b"
+#19
+b10000000000000000000000000000000 $
+0*
+#20
+1)
+0a"
+0(
+1`"
+0#
+b1 "
+b10000000000000000000000000000000 !
+#21
+1%
+1+
+11
+17
+1=
+1C
+1I
+1O
+1U
+1[
+1a
+1g
+1m
+1s
+1y
+1!"
+1'"
+1-"
+13"
+19"
+1?"
+1E"
+1K"
+1Q"
+1W"
+1]"
+1c"
+1i"
+1o"
+1u"
+1{"
+1##
+#24
+0_"
+#25
+1^"
+#30
+1#
+#31
+0%
+0+
+01
+07
+0=
+0C
+0I
+0O
+0U
+0[
+0a
+0g
+0m
+0s
+0y
+0!"
+0'"
+0-"
+03"
+09"
+0?"
+0E"
+0K"
+0Q"
+0W"
+0]"
+0c"
+0i"
+0o"
+0u"
+0{"
+0##
+#34
+1'
+#35
+0^"
+#38
+b10000000000000000000000000000001 $
+1*
+#39
+b1 $
+0b"
+#40

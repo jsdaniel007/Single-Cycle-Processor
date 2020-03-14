@@ -1,0 +1,79 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7ffff40babc0 .scope module, "fadder" "fadder" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "inA"
+    .port_info 1 /INPUT 1 "inB"
+    .port_info 2 /INPUT 1 "Cin"
+    .port_info 3 /OUTPUT 1 "Sout"
+    .port_info 4 /OUTPUT 1 "Cout"
+o0x7fa4561b0138 .functor BUFZ 1, C4<z>; HiZ drive
+o0x7fa4561b0168 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7ffff40db9c0/d .functor XOR 1, o0x7fa4561b0138, o0x7fa4561b0168, C4<0>, C4<0>;
+L_0x7ffff40db9c0 .delay 1 (6,6,6) L_0x7ffff40db9c0/d;
+L_0x7ffff40dbb80/d .functor AND 1, o0x7fa4561b0138, o0x7fa4561b0168, C4<1>, C4<1>;
+L_0x7ffff40dbb80 .delay 1 (4,4,4) L_0x7ffff40dbb80/d;
+o0x7fa4561b0018 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7ffff40dbd60/d .functor XOR 1, L_0x7ffff40db9c0, o0x7fa4561b0018, C4<0>, C4<0>;
+L_0x7ffff40dbd60 .delay 1 (6,6,6) L_0x7ffff40dbd60/d;
+L_0x7ffff40dbec0/d .functor OR 1, L_0x7ffff40dbb80, L_0x7ffff40dc050, C4<0>, C4<0>;
+L_0x7ffff40dbec0 .delay 1 (4,4,4) L_0x7ffff40dbec0/d;
+L_0x7ffff40dc050/d .functor AND 1, o0x7fa4561b0018, L_0x7ffff40db9c0, C4<1>, C4<1>;
+L_0x7ffff40dc050 .delay 1 (4,4,4) L_0x7ffff40dc050/d;
+v0x7ffff40bafb0_0 .net "Cin", 0 0, o0x7fa4561b0018;  0 drivers
+v0x7ffff40dae70_0 .net "Cout", 0 0, L_0x7ffff40dbec0;  1 drivers
+v0x7ffff40daf30_0 .net "Sout", 0 0, L_0x7ffff40dbd60;  1 drivers
+v0x7ffff40db000_0 .net "Y0", 0 0, L_0x7ffff40db9c0;  1 drivers
+v0x7ffff40db0c0_0 .net "Y1", 0 0, L_0x7ffff40dbb80;  1 drivers
+v0x7ffff40db1d0_0 .net "Y2", 0 0, L_0x7ffff40dc050;  1 drivers
+v0x7ffff40db290_0 .net "inA", 0 0, o0x7fa4561b0138;  0 drivers
+v0x7ffff40db350_0 .net "inB", 0 0, o0x7fa4561b0168;  0 drivers
+S_0x7ffff40badc0 .scope module, "instructionmem" "instructionmem" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "addr"
+    .port_info 1 /OUTPUT 32 "instr"
+    .port_info 2 /INPUT 1 "clk"
+    .port_info 3 /INPUT 1 "rst"
+o0x7fa4561b0288 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x7ffff40db4f0_0 .net "addr", 31 0, o0x7fa4561b0288;  0 drivers
+o0x7fa4561b02b8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x7ffff40db5f0_0 .net "clk", 0 0, o0x7fa4561b02b8;  0 drivers
+v0x7ffff40db6b0_0 .var "instr", 31 0;
+v0x7ffff40db770 .array "mem", 65535 0, 31 0;
+o0x7fa4561b0318 .functor BUFZ 1, C4<z>; HiZ drive
+v0x7ffff40db830_0 .net "rst", 0 0, o0x7fa4561b0318;  0 drivers
+E_0x7ffff40b5730 .event posedge, v0x7ffff40db830_0, v0x7ffff40db5f0_0;
+    .scope S_0x7ffff40badc0;
+T_0 ;
+    %wait E_0x7ffff40b5730;
+    %load/vec4 v0x7ffff40db830_0;
+    %pad/u 32;
+    %cmpi/e 1, 0, 32;
+    %jmp/0xz  T_0.0, 4;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0x7ffff40db6b0_0, 0;
+    %vpi_call 3 12 "$readmemh", "compile/prg.bin", v0x7ffff40db770 {0 0 0};
+T_0.0 ;
+    %load/vec4 v0x7ffff40db830_0;
+    %pad/u 32;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.2, 4;
+    %ix/getv 4, v0x7ffff40db4f0_0;
+    %load/vec4a v0x7ffff40db770, 4;
+    %assign/vec4 v0x7ffff40db6b0_0, 0;
+    %vpi_call 3 19 "$display", "Moving instr to: %h, %h", v0x7ffff40db6b0_0, &A<v0x7ffff40db770, v0x7ffff40db4f0_0 > {0 0 0};
+T_0.2 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "compile/fadder.v";
+    "compile/instructionmem.v";

@@ -1,0 +1,87 @@
+$date
+	Fri Apr 19 16:22:38 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module regfile32test $end
+$scope module DUT $end
+$var wire 1 ! clock $end
+$var wire 5 " read1 [4:0] $end
+$var wire 5 # read2 [4:0] $end
+$var wire 1 $ reset $end
+$var wire 32 % writedat [31:0] $end
+$var wire 1 & writeenable $end
+$var wire 5 ' writeto [4:0] $end
+$var wire 32 ( Y1 [31:0] $end
+$var wire 32 ) Y0 [31:0] $end
+$var reg 32 * out1 [31:0] $end
+$var reg 32 + out2 [31:0] $end
+$var integer 32 , i [31:0] $end
+$var integer 32 - signextendbit [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 -
+bx ,
+bx +
+bx *
+b0xxxxx )
+b0xxxxx (
+bx '
+x&
+bx %
+0$
+bx #
+bx "
+x!
+$end
+#6
+b100000 ,
+1$
+#12
+0$
+#18
+b1 +
+b1 *
+b100000 ,
+b0 (
+b0 )
+b11001000 %
+b1 '
+b0 #
+b0 "
+0&
+1!
+#24
+b100000 ,
+1&
+1!
+#30
+0!
+#36
+b110 (
+b101 )
+b100000 ,
+b100101100 %
+b10 '
+b110 #
+b101 "
+1!
+#42
+0!
+#48
+b10 (
+b1 )
+b100000 ,
+b11 %
+b11 '
+b10 #
+b1 "
+1!
+#54

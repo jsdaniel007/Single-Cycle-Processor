@@ -1,0 +1,47 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fffd6faa370 .scope module, "signextend32test" "signextend32test" 2 1;
+ .timescale 0 0;
+v0x7fffd6fca9f0_0 .var "inA", 15 0;
+v0x7fffd6fcaae0_0 .net "outA", 31 0, L_0x7fffd6fcadc0;  1 drivers
+S_0x7fffd6faa4f0 .scope module, "DUT" "signextend32" 2 5, 3 1 0, S_0x7fffd6faa370;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "inA"
+    .port_info 1 /OUTPUT 32 "outA"
+v0x7fffd6faa670_0 .net *"_s1", 0 0, L_0x7fffd6fcabb0;  1 drivers
+v0x7fffd6fca710_0 .net *"_s2", 15 0, L_0x7fffd6fcacd0;  1 drivers
+v0x7fffd6fca7f0_0 .net "inA", 15 0, v0x7fffd6fca9f0_0;  1 drivers
+v0x7fffd6fca8b0_0 .net "outA", 31 0, L_0x7fffd6fcadc0;  alias, 1 drivers
+L_0x7fffd6fcabb0 .part v0x7fffd6fca9f0_0, 15, 1;
+LS_0x7fffd6fcacd0_0_0 .concat [ 1 1 1 1], L_0x7fffd6fcabb0, L_0x7fffd6fcabb0, L_0x7fffd6fcabb0, L_0x7fffd6fcabb0;
+LS_0x7fffd6fcacd0_0_4 .concat [ 1 1 1 1], L_0x7fffd6fcabb0, L_0x7fffd6fcabb0, L_0x7fffd6fcabb0, L_0x7fffd6fcabb0;
+LS_0x7fffd6fcacd0_0_8 .concat [ 1 1 1 1], L_0x7fffd6fcabb0, L_0x7fffd6fcabb0, L_0x7fffd6fcabb0, L_0x7fffd6fcabb0;
+LS_0x7fffd6fcacd0_0_12 .concat [ 1 1 1 1], L_0x7fffd6fcabb0, L_0x7fffd6fcabb0, L_0x7fffd6fcabb0, L_0x7fffd6fcabb0;
+L_0x7fffd6fcacd0 .concat [ 4 4 4 4], LS_0x7fffd6fcacd0_0_0, LS_0x7fffd6fcacd0_0_4, LS_0x7fffd6fcacd0_0_8, LS_0x7fffd6fcacd0_0_12;
+L_0x7fffd6fcadc0 .concat [ 16 16 0 0], v0x7fffd6fca9f0_0, L_0x7fffd6fcacd0;
+    .scope S_0x7fffd6faa370;
+T_0 ;
+    %pushi/vec4 32767, 0, 16;
+    %assign/vec4 v0x7fffd6fca9f0_0, 0;
+    %delay 1, 0;
+    %vpi_call 2 11 "$display", "inA is %b", v0x7fffd6fca9f0_0 {0 0 0};
+    %vpi_call 2 12 "$display", "outA is %b\012", v0x7fffd6fcaae0_0 {0 0 0};
+    %pushi/vec4 32768, 0, 16;
+    %assign/vec4 v0x7fffd6fca9f0_0, 0;
+    %delay 1, 0;
+    %vpi_call 2 16 "$display", "inA is %b", v0x7fffd6fca9f0_0 {0 0 0};
+    %vpi_call 2 17 "$display", "outA is %b\012", v0x7fffd6fcaae0_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "compile/signextendertest.v";
+    "compile/signextender.v";

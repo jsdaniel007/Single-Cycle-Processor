@@ -1,0 +1,53 @@
+$date
+	Tue Feb 19 02:58:51 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module equalstest $end
+$scope module DUT $end
+$var wire 32 ! inA [31:0] $end
+$var wire 32 " inB [31:0] $end
+$var wire 1 # outC $end
+$var wire 32 $ Y1 [31:0] $end
+$var wire 32 % Y0 [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+bx $
+x#
+b0 "
+b0 !
+$end
+#6
+b0 %
+#7
+b11111111111111111111111111111111 $
+#9
+1#
+#12
+b1 !
+#18
+b1 %
+#19
+b11111111111111111111111111111110 $
+#21
+0#
+#24
+b1 "
+b0 !
+#36
+b1 !
+#42
+b0 %
+#43
+b11111111111111111111111111111111 $
+#45
+1#
+#48
