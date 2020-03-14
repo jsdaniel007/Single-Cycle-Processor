@@ -12,16 +12,16 @@ Example: Our SingleCycleProccessor is running a "load word Instruction" so here 
 Assembly File instruction (compile/loadword/loadword.s)
 
     lw 1 0 three
-done halt
-three .fill 3
+    done halt
+    three .fill 3
 
 Hexadecimal Machine Language Translation (compile/loadword/prg.bin)
 
-8C010002
-FC000000
-00000003
-00000000
-00000000
+    8C010002
+    FC000000
+    00000003
+    00000000
+    00000000
 
 And here is the result of our running our instruction through our processor:
 Use this to follow the values along:
